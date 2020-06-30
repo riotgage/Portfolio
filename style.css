@@ -1,0 +1,249 @@
+@import url('https://fonts.googleapis.com/css2?family=Dr+Sugiyama&family=Poppins&family=Lato:wght@700&display=swap');
+
+:root{
+    --primary-color:#00203FFF;
+    --secondary-color:#ADEFD1FF;
+}
+
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+
+}
+
+
+/* Home section */
+#home{
+    height: 100vh;
+    background-color: var(--primary-color);
+    display: flex;
+    overflow-x: hidden;
+    flex-direction: column;
+}
+/* Navigation bar */
+nav{
+    flex: 1;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    min-height: 8vh;
+    position: fixed;
+    top: 0;
+    background: var(--primary-color);
+    width: 100%;
+    z-index: 100;
+    /* background-color:var(--primary-color); */
+}
+.logo h1{
+    font-family: 'Dr Sugiyama', cursive;
+    font-size: 2.5rem;
+
+}
+.logo{
+    color: rgb(224, 229, 233);
+    letter-spacing: 5px;
+    font-size: 20px;
+    margin-left: 5%;
+}
+
+.nav-links{
+    display: flex;
+    width: 60%;
+    justify-content: center;
+}
+
+.nav-links li{
+    list-style: none;
+    margin-left: 5%;
+}
+.nav-links li a{
+    color: var(--secondary-color);
+    text-decoration: none;
+    letter-spacing: 3px;
+    font-size: 14px;
+    font-weight: bold;
+    outline: none;
+    font-family: 'Poppins', sans-serif; 
+}
+.nav-links li:hover{
+    color:red;
+    transition: all 0.8s;
+    transform:scale(1.2);
+}
+
+.burger{
+    display: none;
+}
+ .burger div{
+    width: 20px;
+    height: 2px;
+    background-color: rgb(224, 229, 233);
+    margin: 5px;
+ }
+/* Information section */
+.intro{
+    flex:10;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.info{
+    flex:2;
+    color: white;
+    font-size: 2vw;
+    width: 100px;
+    text-align: center;
+    padding: 20px;
+}
+#name{
+    font-size: 4vw;
+    color: var(--secondary-color);
+}
+.img{
+    flex: 1;
+    background-size: cover;
+    background-repeat: no-repeat;
+    text-align: center;
+    margin-right: 10%;
+    height: 60%;
+    width:100%;    
+    z-index: 10;
+}
+
+.img img{
+    border-radius: 50%;
+    margin: 10%;
+    z-index: 0;
+}
+.cv{
+    margin: 3%;
+    width: 10vw;
+    padding: 1%;
+    font-size: 1vw;
+    background: transparent;
+    border-radius:15%;
+    outline: none;
+    text-decoration: none;
+}
+
+.cv a:focus{
+    outline: none;
+}
+
+.cv a{
+    text-decoration: none;
+    color: var(--secondary-color);
+}
+/* About section */
+
+#about{
+    height: 100vh;
+    background-color: #ffffff;
+    display: flex;
+    overflow-x: hidden;
+    flex-direction: column;
+}
+
+.about-heading{
+    flex: 1;
+    align-items: center;
+    padding-top: 5%;
+    text-align: center;
+    font-size: 3.5vw;
+    font-family: 'Lato', sans-serif;
+    color: var(--primary-color);
+}
+
+.about-container{
+    flex: 10;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+}
+.about-pic{
+    flex: 2;
+    text-align: center;
+
+}
+.about-pic img{
+    width: 70%;
+    margin: 0 auto;
+}
+
+.about-info{
+    flex: 2;
+    margin: auto;
+}
+
+.about-info p{
+    width: 70%;
+    font-size: 1vw;
+    margin: auto;
+    font-family: 'Poppins', sans-serif; 
+}
+
+/* Skills Section */
+
+#skills{
+    height: 100vh;
+
+}
+/* Responsive design */
+
+ @media screen and (max-width:1024px){ 
+    
+    .nav-links{
+        width: 60%;
+    }
+    .img{
+        display: none;
+    }
+    .info{
+        font-size: 5vw;
+    }
+    #name{
+        font-size: 7vw;
+    }
+    .cv{
+        width: 25vw;
+        font-size: 3vw;
+        margin: 5%;
+    }
+    #about{
+        font-size: 5vw;
+        margin-top: 10vh;
+    }
+    .about-pic{
+        display: none;
+    }
+    .about-heading{
+        font-size: 8vw;
+        padding: 1%;
+    }
+    .about-info{
+        align-self: center;
+        padding: 1%;
+        margin: 1%;
+    }
+    .about-info p{
+        width: 70%;
+        font-size: 70%;
+        font-family: 'Poppins', sans-serif; 
+    }
+    
+ }
+ @media screen and (max-width:768px){ 
+    .burger{
+        display:block;
+        margin-right:5% ;
+    }
+    .nav-links{
+        width: 60%;
+        display: none;
+    }
+    
+ }
