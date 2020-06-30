@@ -37,3 +37,19 @@ setInterval(()=>{
     s="../img/img"+count+".jpg"
     pic.src=s;
 },2000)
+
+$('.per').each(function(){
+    var $this = $(this);
+    var per = $this.attr('count');
+    $this.css("width",per+'%');
+    $({animatedValue: 0}).animate({animatedValue: per},{
+      duration: 1000,
+      step: function(){
+        $this.attr('count', Math.floor(this.animatedValue) + '%');
+      },
+      complete: function(){
+        $this.attr('count', Math.floor(this.animatedValue) + '%');
+      }
+    });
+  });
+

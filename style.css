@@ -147,7 +147,7 @@ nav{
     flex-direction: column;
 }
 
-.about-heading{
+h2{
     flex: 1;
     align-items: center;
     padding-top: 5%;
@@ -184,14 +184,102 @@ nav{
     font-size: 1vw;
     margin: auto;
     font-family: 'Poppins', sans-serif; 
+    color: var(--primary-color);
 }
 
 /* Skills Section */
 
 #skills{
     height: 100vh;
-
+    background-color: #ffffff;
+    display: flex;
+    overflow-x: hidden;
+    flex-direction: column;
 }
+
+.skills-heading{
+    flex: 2;
+    align-items: center;
+    padding-top: 5%;
+    text-align: center;
+    font-family: 'Lato', sans-serif;
+    color: var(--primary-color);
+}
+.skills-heading h2{
+    font-size: 3.5vw;
+}
+.skills-heading h3{
+    font-size: 1vw;
+    letter-spacing: 2px;
+}
+
+.skill-container{
+    display: grid;
+    margin: auto;
+    margin-bottom: 5%;
+    width: 80%;
+    gap: 2% 2%;
+    height: 80%;
+    overflow: visible;
+    grid-auto-rows: 15%;
+    grid-template-columns:repeat(2,1fr);
+}
+
+.skill-name{
+    font-size: 18px;
+    font-weight: 700;
+    text-transform: uppercase;
+    margin: 20px 0;
+}
+
+.bar{
+    height: 20px;
+    background:var(--primary-color);
+    border-radius: 8px;
+  }
+  .per{
+    height: 20px;
+    background-color:var(--secondary-color);
+    border-radius: 8px;
+    width: 0;
+    transition: 1s linear;
+    position: relative;
+  }
+  
+.per::before{
+    content: attr(count);
+    position: absolute;
+    padding: 4px 6px;
+    background-color:var(--primary-color);
+    color: var(--secondary-color);
+    font-size: 15px;
+    border-radius: 4px;
+    top: -35px;
+    right: 0;
+    transform: translateX(50%);
+  }
+  
+  .per::after{
+    content: '';
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    background-color: var(--primary-color);
+    top: -16px;
+    right: 0;
+    transform: translateX(50%) rotate(45deg);
+    border-radius: 2px;
+  }
+
+/* Projects section */
+#projects{
+    height: 100vh;
+    background-color: #ffffff;
+    display: flex;
+    overflow-x: hidden;
+    flex-direction: column;
+}
+
 /* Responsive design */
 
  @media screen and (max-width:1024px){ 
@@ -224,6 +312,15 @@ nav{
         font-size: 8vw;
         padding: 1%;
     }
+    .skills-heading h2{
+        font-size: 8vw;
+        padding: 1%;
+        margin-top: 10%;
+    }
+    .skills-heading h3{
+        font-size: 3vw;
+        padding: 1%;
+    }
     .about-info{
         align-self: center;
         padding: 1%;
@@ -234,7 +331,13 @@ nav{
         font-size: 70%;
         font-family: 'Poppins', sans-serif; 
     }
-    
+    .skill-container{
+        grid-template-columns: 1fr;
+    }
+    .skills{
+        margin: 10px;
+    }
+
  }
  @media screen and (max-width:768px){ 
     .burger{
