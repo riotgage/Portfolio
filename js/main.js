@@ -4,7 +4,6 @@ var fadeIn = {
 };
 
 
-ScrollReveal().reveal('.info',fadeIn);
 
 var slideRight = {
     distance: '150%',
@@ -15,7 +14,6 @@ var slideRight = {
     reset:true
 };
 
-ScrollReveal().reveal('#pro', slideRight);
 
 var slideLeft = {
     distance: '150%',
@@ -25,11 +23,14 @@ var slideLeft = {
     duration:2000,
     reset:true
 };
-
+ScrollReveal().reveal('.info',fadeIn);
+ScrollReveal().reveal('#pro', slideRight);
 ScrollReveal().reveal('.about-pic', slideLeft);
 ScrollReveal().reveal('.about-heading',fadeIn)
 ScrollReveal().reveal('.about-info',slideRight)
-
+ScrollReveal().reveal('#card1',slideRight)
+ScrollReveal().reveal('#card3',slideLeft)
+ScrollReveal().reveal('#card2',fadeIn)
 count=0
 var pic=document.getElementById("pic")
 setInterval(()=>{
@@ -37,19 +38,3 @@ setInterval(()=>{
     s="../img/img"+count+".jpg"
     pic.src=s;
 },2000)
-
-$('.per').each(function(){
-    var $this = $(this);
-    var per = $this.attr('count');
-    $this.css("width",per+'%');
-    $({animatedValue: 0}).animate({animatedValue: per},{
-      duration: 1000,
-      step: function(){
-        $this.attr('count', Math.floor(this.animatedValue) + '%');
-      },
-      complete: function(){
-        $this.attr('count', Math.floor(this.animatedValue) + '%');
-      }
-    });
-  });
-
