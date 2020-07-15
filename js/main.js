@@ -24,7 +24,7 @@ var slideLeft = {
     reset:true
 };
 ScrollReveal().reveal('.info',fadeIn);
-ScrollReveal().reveal('#pro', slideRight);
+ScrollReveal().reveal('.pro', slideRight);
 ScrollReveal().reveal('.about-pic', slideLeft);
 ScrollReveal().reveal('.about-heading',fadeIn)
 ScrollReveal().reveal('.about-info',slideRight)

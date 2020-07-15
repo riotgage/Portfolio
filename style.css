@@ -3,7 +3,7 @@
 @import url('https://fonts.googleapis.com/css?family=Quicksand:400,700');
 /* Hey , You must be a programmer if you are seeing this. As you go through this code you will find a lot of redundant code, which can be avoided by grouping together some classes.
    I will try and change that ,whenever i get time. 
-   Apaet from that If you have any suggestions for this website you can write me at rvsatwadhar@gmail.com
+   Apart from that If you have any suggestions for this website you can write to me at rvsatwadhar@gmail.com
 */
 :root {
   --primary-color: #00203FFF;
@@ -145,13 +145,15 @@ nav {
 }
 
 .cv {
-  margin: 3%;
+  margin: 10%;
   width: 10vw;
   padding: 1%;
   font-size: 1vw;
   background: transparent;
   border-radius: 15%;
+  border: 1px solid var(--secondary-color);
   outline: none;
+  color: var(--secondary-color);
   text-decoration: none;
 }
 
@@ -228,7 +230,6 @@ h1 {
 }
 .card_image img {
   height: 350px;
-  max-height: auto;
   max-width: 100%;
   vertical-align: middle;
 }
