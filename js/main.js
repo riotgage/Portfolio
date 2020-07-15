@@ -35,6 +35,6 @@ count=0
 var pic=document.getElementById("pic")
 setInterval(()=>{
     count=(count+1)%4;
-    s="Portfolio/img/img"+count+".jpg"
+    s="../img/img"+count+".jpg"
     pic.src=s;
 },2000)
