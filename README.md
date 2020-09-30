@@ -10,5 +10,5 @@ Trying to keep it minimalistic.
 * Download CV option
 * Rich Animations 
 
-#DEMO:
+# DEMO:
 https://riotgage.github.io/Portfolio/index.html
